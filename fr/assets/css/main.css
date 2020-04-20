@@ -47,7 +47,7 @@ audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 /* Prevents modern browsers from displaying 'audio' without controls */
 audio:not([controls]) { display: none; }
 
-a { color: #2f7d95; }
+a { color: #F58436; }
 
 /* Apply focus state */
 /* Remove outline from links */
@@ -86,11 +86,11 @@ textarea { overflow: auto; vertical-align: top; }
 /* ========================================================================== BASE ELEMENTS @mixin ========================================================================= */
 html { /* sticky footer fix */ position: relative; min-height: 100%; }
 
-body { margin: 0; padding: 0; color: #3d4144; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; line-height: 1.5; }
+body { margin: 0; padding: 0; color: #3d4144; font-family: Helvetica, -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; line-height: 1.5; }
 
 body.overflow--hidden { /* when primary navigation is visible, the content in the background won't scroll */ overflow: hidden; }
 
-h1, h2, h3, h4, h5, h6 { margin: 2em 0 0.5em; line-height: 1.2; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-weight: bold; }
+h1, h2, h3, h4, h5, h6 { margin: 2em 0 0.5em; line-height: 1.2; font-family: Helvetica, -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-weight: bold; }
 
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child { margin-top: 0; }
 
@@ -130,9 +130,9 @@ blockquote cite { font-style: italic; }
 blockquote cite:before { content: "\2014"; padding-right: 5px; }
 
 /* links */
-a:visited { color: #4e91a5; }
+a:visited { color: #F58436; }
 
-a:hover { color: #235e70; outline: 0; }
+a:hover { color: #d95c34; outline: 0; }
 
 /* buttons */
 /* code */
@@ -176,7 +176,7 @@ figcaption { margin-bottom: 0.5em; color: #646769; font-family: Georgia, Times, 
 
 figcaption a { -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
-figcaption a:hover { color: #235e70; }
+figcaption a:hover { color: #d95c34; }
 
 /* Fix IE9 SVG bug */
 svg:not(:root) { overflow: hidden; }
@@ -203,6 +203,8 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
 /* http://www.456bereastreet.com/archive/200711/screen_readers_sometimes_ignore_displaynone/ */
 .hidden, .is--hidden { display: none; visibility: hidden; }
 
+.always-hidden { display: none !important; visibility: hidden !important; }
+
 /* for preloading images */
 .load { display: none; }
 
@@ -217,7 +219,7 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
 .screen-reader-text:focus, .screen-reader-shortcut:focus { clip: auto !important; height: auto !important; width: auto !important; display: block; font-size: 1em; font-weight: bold; padding: 15px 23px 14px; background: #fff; z-index: 100000; text-decoration: none; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); }
 
 /* Skip links @mixin ========================================================================= */
-.skip-link { position: fixed; z-index: 20; margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; white-space: nowrap; }
+.skip-link { position: fixed; z-index: 20; margin: 0; font-family: Helvetica, -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; white-space: nowrap; }
 
 .skip-link li { height: 0; width: 0; list-style: none; }
 
@@ -403,7 +405,7 @@ form br { display: none; }
 
 label, input, button, select, textarea { vertical-align: baseline; *vertical-align: middle; }
 
-input, button, select, textarea { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; }
+input, button, select, textarea { box-sizing: border-box; font-family: Helvetica, -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; }
 
 label { display: block; margin-bottom: 0.25em; color: #3d4144; cursor: pointer; }
 
@@ -503,7 +505,7 @@ input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focu
 
 /* ========================================================================== BUTTONS @mixin ========================================================================= */
 /* Default button @mixin ========================================================================= */
-.btn, #goog-wm-sb { /* default */ display: inline-block; margin-bottom: 0.25em; padding: 0.5em 1em; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 0.75em; font-weight: bold; text-align: center; text-decoration: none; border-width: 0; cursor: pointer; /* button colors */ /* fills width of parent container */ /* disabled */ /* extra large button */ /* large button */ /* small button */ }
+.btn, #goog-wm-sb { /* default */ display: inline-block; margin-bottom: 0.25em; padding: 0.5em 1em; font-family: Helvetica, -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 0.75em; font-weight: bold; text-align: center; text-decoration: none; border-width: 0; cursor: pointer; /* button colors */ /* fills width of parent container */ /* disabled */ /* extra large button */ /* large button */ /* small button */ }
 
 .btn .icon, #goog-wm-sb .icon { margin-right: 0.5em; }
 
@@ -579,8 +581,6 @@ input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focu
 
 #main-nav { background-color: #fff; z-index: 999; box-shadow: 0 -3px 10px #333; top: 0; }
 
-#main-nav #main-nav-home { float: left; width: 36px; padding-top: 9px; }
-
 #main-nav ul { float: right; }
 
 #main-nav ul li { display: inline-block; }
@@ -588,6 +588,14 @@ input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focu
 #main-nav ul li a { display: block; padding-left: 1em; padding-right: 1em; padding-top: 0.5em; padding-bottom: 0.5em; color: #F58436; }
 
 #main-nav ul li a:hover { color: #d95c34; background-color: #eee; }
+
+#main-nav-home { float: left; padding-top: 9px; }
+
+#main-nav-home img { height: 30px; width: auto; }
+
+#logo-3 { transition-duration: 0.66s; }
+
+#main-nav-home:hover #logo-3 { transform: rotateY(180deg); }
 
 .col-1 { float: left; width: 5.7142857143%; margin-right: 2.8571428571%; }
 
@@ -678,9 +686,11 @@ input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focu
 
 #home-hero .logo img { filter: drop-shadow(0 2px 1px #333); }
 
-#home-hero blockquote { color: #F7BC36; border-left-color: #fff; text-shadow: #333 0 2px 1px; font-size: 1em; }
+#home-hero blockquote { color: #fff; border-left-color: #fff; text-shadow: #333 0 2px 1px; font-size: 1em; }
 
-#home-hero blockquote cite { font-weight: bold; }
+#home-hero blockquote cite { font-weight: bold; font-style: normal; color: #ccc; }
+
+#about figure { margin-top: 0; }
 
 /* ======================================== Programs ======================================== */
 .small-heading { font-size: 1em; color: #7a8288; margin-top: 0; }
@@ -690,6 +700,20 @@ input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focu
 #programs .panel:nth-child(2n + 1) { background-color: #F7BC36; }
 
 #program-index { background-color: #F58436; }
+
+#program-index li { text-align: center; }
+
+#program-index a { text-decoration: none; color: #333; font-weight: bold; }
+
+#program-index a:hover { color: #d95c34; }
+
+.tile-img { height: 0; padding-bottom: 100%; background-size: cover; background-color: #fff; background-position: center; position: relative; margin-bottom: 0.5em; }
+
+.tile-img::after { content: ""; opacity: 0; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: #333; transition: opacity 0.2s ease-in-out; }
+
+a:hover .tile-img::after { opacity: 15%; }
+
+.tile-text { text-align: center; }
 
 #sector3insights { background-color: #F58436; }
 
@@ -714,6 +738,8 @@ input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focu
 #team span { color: #7a8288; }
 
 #team p { font-size: 0.75em; }
+
+.form-group--submit { display: flex; justify-content: space-between; align-items: center; }
 
 #main-footer { background-color: #d95c34; font-size: 0.75em; color: #fff; padding-top: 0.5em; padding-bottom: 0.5em; text-align: center; }
 
