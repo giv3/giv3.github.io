@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <title>GIV3 | Feel Great Giving</title>
     <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
     <link rel="stylesheet"
-          href="/assets/css/fontawesome-all.min.css?v=1587357275">
+          href="/assets/css/fontawesome-all.min.css?v=1587694491">
     <link rel="stylesheet"
-          href="/assets/css/main.css?v=1587357275">
+          href="/assets/css/flexgrid.css?v=1587694491"
+          type="text/css">
+    <link rel="stylesheet"
+          href="/assets/css/main.css?v=1587694491">
     <link rel="apple-touch-icon" sizes="57x57"
       href="/assets/img/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60"
@@ -42,15 +47,19 @@
 <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-<div id="site-wrap">
-    <nav id="main-nav" class="sticky">
-        <div class="container">
+<nav id="main-nav">
+    <div class="container">
+        <div class="main-nav-contents">
             <a href="#" id="main-nav-home">
                 <img src="/assets/img/en/logo_no_3.svg"
                      alt="GIV">
                 <img src="/assets/img/3.svg"
                      alt="3"
                      id="logo-3">
+            </a>
+            <a id="nav-burger" href="#">
+                <i class="fas fa-bars burger-closed"></i>
+                <i class="fas fa-times burger-open"></i>
             </a>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -66,24 +75,49 @@
                 </li>
             </ul>
         </div>
-    </nav>
-    <header id="home-hero">
+    </div>
+</nav>
+<div id="main-nav-trunk">
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#giving">Smart Giving</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+            
+                
+                <a href="/fr/">FR</a>
+                
+        </li>
+    </ul>
+</div>
+<div id="site-wrap">
+    <header id="home-hero"
+            class="parallax-background"
+            data-parallax="scroll"
+            data-speed="0.8"
+            data-image-src="/assets/img/tree_blue.jpg">
         <div class="container">
-            <div class="hero-box">
-                <h1 class="logo col-4">
-                    <img src="/assets/img/en/logo.svg"
-                         alt="GIV3 | Feel Great Giving">
-                </h1>
-                <blockquote class="col-6">
-                    <p>Someone is sitting in the shade today because someone planted a tree a long time ago.</p>
-                    <cite>Warren Buffet</cite>
-                </blockquote>
+            <div class="hero-box row">
+                <div class="col-lg-4">
+                    <h1 class="logo">
+                        <img src="/assets/img/en/logo.svg"
+                             alt="GIV3 | Feel Great Giving">
+                    </h1>
+                </div>
+                <div class="col-lg-6">
+                    <blockquote>
+                        <p>Someone is sitting in the shade today because<br>someone planted a tree a long time ago.</p>
+                        <cite>Warren Buffet</cite>
+                    </blockquote>
+                </div>
             </div>
         </div>
     </header>
     <section id="about" class="panel">
-        <div class="container">
-            <div class="col-6">
+        <div class="container row">
+            <div class="col-md-6">
                 <h2>GIV3 is a movement to encourage more Canadians to be more giving.</h2>
                 <p>GIV3 is a privately-registered Canadian charity<sup><a href="#contact">1</a></sup>, though we do not
 ask for donations from Canadians. Instead, we encourage everybody to be more giving by
@@ -94,7 +128,7 @@ GIV3 engages Canadian charities and the public in activities to encourage these 
 
 
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <figure>
                     <div class="responsive-video-container">
                         <iframe src="https://www.youtube.com/embed/OLR3I4YPc20?rel=0&modestbranding=1&cc_lang_pref=en"
@@ -111,8 +145,8 @@ GIV3 engages Canadian charities and the public in activities to encourage these 
         <div id="program-index" class="panel">
             <h2 class="text-center">Our Programs</h2>
             <div class="container">
-                <ul class="list-reset">
-                    <li class="col-3">
+                <div class="row">
+                    <div class="col-sm-3">
                         <a href="#giving-tuesday">
                             <div class="tile-img"
                                  style="background-image: url(/assets/img/giving_tuesday.svg)">
@@ -121,8 +155,8 @@ GIV3 engages Canadian charities and the public in activities to encourage these 
                             Giving Tuesday
                         </span>
                         </a>
-                    </li>
-                    <li class="col-3">
+                    </div>
+                    <div class="col-sm-3">
                         <a href="#giving-challenge">
                             <div class="tile-img"
                                  style="background-image: url(/assets/img/en/gcgc.png)">
@@ -131,8 +165,8 @@ GIV3 engages Canadian charities and the public in activities to encourage these 
                             The Great Canadian Giving Challenge
                         </span>
                         </a>
-                    </li>
-                    <li class="col-3">
+                    </div>
+                    <div class="col-sm-3">
                         <a href="#philanthropic-conversation">
                             <div class="tile-img"
                                  style="background-image: url(/assets/img/philanthropic_conversation.png)">
@@ -141,8 +175,8 @@ GIV3 engages Canadian charities and the public in activities to encourage these 
                             The Philanthropic Conversation
                         </span>
                         </a>
-                    </li>
-                    <li class="col-3">
+                    </div>
+                    <div class="col-sm-3">
                         <a href="#billion-dollar-opportunity">
                             <div class="tile-img"
                                  style="background-image: url(/assets/img/billion_dollar_opportunity.png)">
@@ -151,25 +185,26 @@ GIV3 engages Canadian charities and the public in activities to encourage these 
                             The Billion Dollar Opportunity
                         </span>
                         </a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="giving-tuesday" class="panel">
-            <div class="container">
-                <div class="col-6">
+        <div id="giving-tuesday" class="panel program">
+            <div class="container row">
+                <div class="col-md-6">
                     <h2 class="small-heading">Giving Tuesday</h2>
                     <h3>After Black Friday & Cyber Monday Take the Time to Give Back</h3>
-                    <p>GivingTuesday is a global day of giving that falls annually after Black Friday and Cyber Monday. GIV3 co-hosts the GivingTuesday celebrations in Canada, in partnership with CanadaHelps. The movement now engages more than 7,000 charities and businesses and millions of Canadians from coast to coast.</p>
+                    <p>GivingTuesday is a global day of giving that falls annually after Black Friday and Cyber Monday. GIV3 and CanadaHelps are co-founders of GivingTuesday in Canada. The movement now engages more than 7,000 charities and businesses and millions of Canadians from coast to coast.</p>
 
 <p>Check out the latest impact results from GivingTuesday by visiting the website below.</p>
 
                     <a href="https://givingtuesday.ca/"
-                       class="btn btn--primary" btn--large>
+                       target="_blank"
+                       class="btn btn--primary btn--large">
                         Visit GivingTuesday.ca
                     </a>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <figure>
                         <div class="responsive-video-container">
                             <iframe src="https://www.youtube.com/embed/Rq4DNKlVdxw?rel=0&modestbranding=1&cc_lang_pref=en"
@@ -182,9 +217,22 @@ GIV3 engages Canadian charities and the public in activities to encourage these 
                 </div>
             </div>
         </div>
-        <div id="giving-challenge" class="panel">
-            <div class="container">
-                <div class="col-6">
+        <div id="giving-challenge" class="panel program">
+            <div class="container row">
+                <div class="col-md-6">
+                    <h2 class="small-heading">The Great Canadian Giving Challenge</h2>
+                    <h3>Your Donation Could Make a BIG Difference For the Charity of Your Choice</h3>
+                    <p>The Great Canadian Giving Challenge is a public contest to benefit any registered Canadian charity, occurring annually in June. Every $1 donated to a registered charity on CanadaHelps.org, automatically enters the charity to win a $10,000 donation awarded on Canada Day.</p>
+
+<p>Check out the latest impact results from The Great Canadian Giving Challenge by visiting the website below.</p>
+
+                    <a href="https://givingchallenge.ca/"
+                       target="_blank"
+                       class="btn btn--primary btn--large">
+                        Visit GivingChallenge.ca
+                    </a>
+                </div>
+                <div class="col-md-6">
                     <figure>
                         <div class="responsive-video-container">
                             <iframe src="https://www.youtube.com/embed/SLWjwHwsVWQ?rel=0&modestbranding=1&cc_lang_pref=en"
@@ -195,23 +243,11 @@ GIV3 engages Canadian charities and the public in activities to encourage these 
                         <figcaption></figcaption>
                     </figure>
                 </div>
-                <div class="col-6">
-                    <h2 class="small-heading">The Great Canadian Giving Challenge</h2>
-                    <h3>Your Donation Could Make a BIG Difference For the Charity of Your Choice</h3>
-                    <p>The Great Canadian Giving Challenge is a public contest to benefit any registered Canadian charity, occurring annually in June. Every $1 donated to a registered charity on CanadaHelps.org, automatically enters the charity to win a $10,000 donation awarded on Canada Day.</p>
-
-<p>Check out the latest impact results from The Great Canadian Giving Challenge by visiting the website below.</p>
-
-                    <a href="https://givingchallenge.ca/"
-                       class="btn btn--primary" btn--large>
-                        Visit GivingChallenge.ca
-                    </a>
-                </div>
             </div>
         </div>
-        <div id="philanthropic-conversation" class="panel">
-            <div class="container">
-                <div class="col-6">
+        <div id="philanthropic-conversation" class="panel program">
+            <div class="container row">
+                <div class="col-md-6">
                     <h2 class="small-heading">The Philanthropic Conversation</h2>
                     <h3>Providing financial advisors the tools to engage conversations about charitable giving</h3>
                     <p>GIV3, in collaboration with other non-profit sector leaders, is working to help Financial Advisors engage their affluent clients in conversations about charitable giving. In 2014, we undertook a ground-breaking research study on the topic. We subsequently published The Philanthropic Conversation e-Book and printed booklet as a resource for Financial Advisors, highlighting the various opportunities revealed by the research. The e-Book can be downloaded free-of-charge from our partner, Sector3Insights.</p>
@@ -219,11 +255,12 @@ GIV3 engages Canadian charities and the public in activities to encourage these 
 <p>We look forward to continuing this important initiative through the distribution and development of training materials for webinars and conference sessions.</p>
 
                     <a href="https://sector3insights.com/the-philanthropic-conversation/"
-                       class="btn btn--primary" btn--large>
+                       target="_blank"
+                       class="btn btn--primary btn--large">
                         Visit Sector3Insights.ca
                     </a>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <figure>
                         <img src="assets/img/philanthropic_conversation.png"
                              alt="The Philanthropic Conversation">
@@ -232,18 +269,9 @@ GIV3 engages Canadian charities and the public in activities to encourage these 
                 </div>
             </div>
         </div>
-        <div id="billion-dollar-opportunity" class="panel">
-            <div class="container">
-                <div class="col-6">
-                    <figure>
-                        <div class="responsive-video-container">
-                            <img src="assets/img/billion_dollar_opportunity.png"
-                                 alt="The Billion Dollar Opportunity">
-                        </div>
-                        <figcaption></figcaption>
-                    </figure>
-                </div>
-                <div class="col-6">
+        <div id="billion-dollar-opportunity" class="panel program">
+            <div class="container row">
+                <div class="col-md-6">
                     <h2 class="small-heading">The Billion Dollar Opportunity</h2>
                     <h3>What would our society look like if we were all as generous as our Grandparents?</h3>
                     <p>All of the GIV3 programs to date are part of a greater vision: The Billion Dollar Opportunity.  This is a multi-year, multi-faceted vision to inspire more giving, similar to ParticipACTION, but for the non-profit sector.</p>
@@ -253,21 +281,35 @@ GIV3 engages Canadian charities and the public in activities to encourage these 
 <p>Please contact us to discuss this idea further.</p>
 
                     <a href="#contact"
-                       class="btn btn--primary" btn--large>
+                       class="btn btn--primary btn--large">
                         Contact us
                     </a>
+                </div>
+                <div class="col-md-6">
+                    <figure>
+                        <img src="assets/img/billion_dollar_opportunity.png"
+                             alt="The Billion Dollar Opportunity">
+                        <figcaption></figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
     </section>
     <aside id="sector3insights" class="panel--narrow">
-        <div class="container">
+        <div class="container container--narrow">
+            <div>
+                <h3>
+                    <img src="assets/img/s3i.png"
+                         alt="Sector3Insights" width="282">
+                    is your source for philanthropic research
+                </h3>
+                <p>GIV3's sister initiative is paving new ground for market insight around charitable giving</p>
+            </div>
             <a href="https://sector3insights.com/"
-               class="btn btn--primary btn--large pull-right">
+               target="_blank"
+               class="btn btn--primary btn--large">
                 Learn More
             </a>
-            <h3><em>Sector3Insights</em> is your source for philanthropic research</h3>
-            <p>GIV3's sister initiative is paving new ground for market insight around charitable giving</p>
         </div>
     </aside>
     <section id="giving" class="panel">
@@ -319,26 +361,26 @@ GIV3 engages Canadian charities and the public in activities to encourage these 
     </section>
     <section id="team" class="panel">
         <h2 class="text-center">Our Team</h2>
-        <div class="container">
-            <div class="col-6">
+        <div class="container row">
+            <div class="col-md-6">
                 <h3>Board of Directors</h3>
                 <ul>
-  <li>John Hallward, Chairman <span>(Global Director Ipsos ASI Inc)</span></li>
-  <li>Brian Casey <span>(Principal, Kerr Financial)</span></li>
-  <li>Edward Claxton <span>(Principal at Claxton Business Law)</span></li>
-  <li>Graham Hallward <span>(Alva Foundation)</span></li>
-  <li>Gisele Wilson <span>(Founder, Coriel Capital)</span></li>
+  <li><a href="https://www.linkedin.com/in/john-hallward-00153820/" target="_blank">John Hallward, Chairman</a></li>
+  <li><a href="https://www.linkedin.com/in/brian-casey-97b66239/" target="_blank">Brian Casey</a></li>
+  <li><a href="https://www.linkedin.com/in/edward-b-ted-claxton-09258a1/" target="_blank">Edward Claxton</a></li>
+  <li>Graham Hallward</li>
+  <li><a href="https://www.linkedin.com/in/gisele-wilson-10316569/" target="_blank">Gisele Wilson</a></li>
 </ul>
 
                 <h3>Advisors</h3>
                 <ul>
   <li>Lys Hugessen, Past President</li>
-  <li>Woodrow Rosenbaum <span>(With Intent Inc.)</span></li>
+  <li>Woodrow Rosenbaum</li>
 </ul>
 
             </div>
-            <div class="col-6">
-                <h3>Our Partners & Supporters</h3>
+            <div class="col-md-6">
+                <h3>Partners & Supporters</h3>
                 <p>GIV3 does not solicit funds from the public to help us do our work – we simply ask people to give or volunteer for the charities of their own choice. In order to maintain our programs we rely on support from private sources. We are very grateful to the following for their generous financial support, in-kind support and/or collaboration:</p>
 
 <ul>
@@ -360,8 +402,8 @@ GIV3 engages Canadian charities and the public in activities to encourage these 
 
     </section>
     <section id="contact" class="panel">
-        <div class="container">
-            <div class="col-6">
+        <div class="container row">
+            <div class="col-md-6">
                 <h2>Contact Us</h2>
                 <h3>Postal Address</h3>
                 <address><p>GIV3<br />
@@ -374,26 +416,26 @@ H3Y 2Y3</p>
                     <a href="https://apps.cra-arc.gc.ca/ebci/hacc/srch/pub/dsplyRprtngPrd?q.srchNm=giv3&q.stts=0007&selectedCharityBn=896499464RR0001&dsrdPg=1">#896499464RR0001</a>
                 </p>
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <form action="https://formspree.io/mqkdvwjq" id="contact-form" method="post">
     <input type="hidden" name="_language" value="en">
     <input type="hidden" name="_replyto" value="" id="input-replyto">
-    <div class="container">
-        <div class="form-group col-6">
+    <div class="row">
+        <div class="col-xs-6">
             <label for="name">Name</label>
             <input type="text" name="name" required>
         </div>
-        <div class="form-group col-6">
+        <div class="col-xs-6">
             <label for="email">Email</label>
             <input type="email" name="email" required id="input-email">
         </div>
     </div>
-    <div class="container">
-        <div class="form-group">
+    <div class="row">
+        <div class="col-xs-12">
             <label for="message">Message</label>
             <textarea name="message" rows="4" required></textarea>
         </div>
-        <div class="form-group form-group--submit">
+        <div class="col-xs-12">
             <button type="submit" class="btn btn--primary btn--large">
                 Submit
             </button>
@@ -403,8 +445,8 @@ H3Y 2Y3</p>
 <script>
     var emailInput = document.getElementById('input-email');
     var replytoInput = document.getElementById('input-replyto');
-    emailInput.addEventListener('keyup', function(e) {
-       replytoInput.value = emailInput.value;
+    emailInput.addEventListener('keyup', function (e) {
+        replytoInput.value = emailInput.value;
     });
 </script>
             </div>
@@ -418,8 +460,23 @@ H3Y 2Y3</p>
         </div>
     </footer>
 </div>
+<script src="https://code.jquery.com/jquery-3.5.0.slim.min.js"
+        integrity="sha256-MlusDLJIP1GRgLrOflUQtshyP0TwT/RHXsI1wWGnQhs="
+        crossorigin="anonymous"></script>
+<script src="assets/js/parallax.min.js"></script>
 <script>
     document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+    $(function () {
+        var body = $('body');
+        $('#nav-burger').click(function (e) {
+            e.preventDefault();
+            body.toggleClass('nav-open');
+        });
+        $('#main-nav-trunk a').click(function (e) {
+            body.removeClass('nav-open');
+        })
+    });
 </script>
 </body>
 </html>
