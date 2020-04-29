@@ -637,6 +637,16 @@ body.nav-open .burger-closed { display: none; }
 
 .panel--narrow { padding-top: 2em; padding-bottom: 2em; }
 
+.panel--contrast { background-color: #F7BC36; }
+
+.panel--contrast .heading-large { color: #fff; }
+
+.heading-large { font-size: 1.953em; }
+
+.small-heading { font-size: 1em; font-style: italic; color: #7a8288; font-weight: normal; margin-top: 0; }
+
+.small-heading + h3 { margin-top: 1em; }
+
 /* ======================================== Hero ======================================== */
 #home-hero { position: relative; height: calc(100vh - 55px); max-height: 100vw; display: flex; align-items: center; width: 100%; }
 
@@ -646,24 +656,20 @@ body.nav-open .burger-closed { display: none; }
 
 @media (min-width: 64em) { #home-hero .logo { margin: 0; } }
 
-#home-hero .logo img { max-width: 275px; -webkit-filter: drop-shadow(0 2px 1px #333); filter: drop-shadow(0 2px 1px #333); }
+#home-hero .logo img { max-width: 275px; -webkit-filter: drop-shadow(0 2px 2px #333); filter: drop-shadow(0 2px 2px #333); }
 
 @media (min-width: 48em) { #home-hero .logo img { max-width: 400px; } }
 
-#home-hero blockquote { color: #fff; border-left-color: #fff; text-shadow: #333 0 3px 2px; font-size: 1em; }
+#home-hero blockquote { color: #333; font-weight: bold; border-left-color: #555; text-shadow: #fff 0 1px 1px; font-size: 1em; }
 
-#home-hero blockquote cite { font-weight: bold; font-style: normal; color: #ccc; }
+#home-hero blockquote cite { font-weight: bold; font-style: normal; color: #555; }
 
 .parallax-mirror, .parallax-slider { transition: none; }
 
 #about figure { margin-top: 0; }
 
 /* ======================================== Programs ======================================== */
-.small-heading { font-size: 1em; color: #7a8288; margin-top: 0; }
-
-.small-heading + h3 { margin-top: 1em; }
-
-#program-index { background-color: #F7BC36; text-align: center; }
+#program-index { text-align: center; }
 
 #program-index .row { flex-direction: column; }
 
@@ -685,7 +691,7 @@ a:hover .tile-img::after { opacity: 15%; }
 
 .tile-text { text-align: center; color: #d95c34; }
 
-.program:nth-child(2n + 1) { background-color: #F7BC36; }
+a:hover .tile-text { color: #b84722; }
 
 .program:nth-child(2n + 1) .row { flex-direction: row-reverse; }
 
@@ -720,8 +726,6 @@ a:hover .tile-img::after { opacity: 15%; }
 @media (min-width: 37.5em) { .icon-list li { display: -webkit-flex; display: flex; }
   .icon-list i { font-size: 64pt; }
   .icon-list p { width: 75%; } }
-
-#team { background-color: #F7BC36; }
 
 #team a, #team a:visited { color: #7a8288; }
 
