@@ -76,7 +76,7 @@
         }
 
         if (frHostNames.includes(window.location.hostname)) {
-            return changeHostName(frCanonical);
+            return changeHostName(frCanonical + '/fr');
         }
 
         if (enHostNames.includes(window.location.hostname)) {
