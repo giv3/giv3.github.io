@@ -23,7 +23,7 @@
     $(function () {
 
 
-        handleDomainAliases();
+        // handleDomainAliases();
 
         document.getElementById('copyright-year').textContent = new Date().getFullYear();
 
