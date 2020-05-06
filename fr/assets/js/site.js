@@ -78,12 +78,16 @@
             )
 
         ) {
-            return changeHostName(frCanonical + '/fr');
+            return changeHostName(
+                frCanonical,
+                '/fr' + window.location.hostname.replace(/^\/fr/, '')
+            );
         }
     };
 
-    var changeHostName = function (hostName) {
-        var url = 'https://' + hostName + window.location.pathname + window.location.hash;
+    var changeHostName = function (hostName, path) {
+        path = path || window.location.pathname;
+        var url = 'https://' + hostName + path + window.location.hash;
         window.location.replace(url);
     };
 })(document, window);
