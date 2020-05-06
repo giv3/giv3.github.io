@@ -69,18 +69,16 @@
         }
 
         if (
-            window.location.pathname.startsWith('/fr') &&
-            window.location.hostname !== frCanonical
+            (
+                window.location.pathname.startsWith('/fr') &&
+                window.location.hostname !== frCanonical
+            ) || (
+                !window.location.pathname.startsWith('/fr') &&
+                window.location.hostname === frCanonical
+            )
+
         ) {
-            return changeHostName(frCanonical);
-        }
-
-        if (frHostNames.includes(window.location.hostname)) {
             return changeHostName(frCanonical + '/fr');
-        }
-
-        if (enHostNames.includes(window.location.hostname)) {
-            return changeHostName(enCanonical);
         }
     };
 
