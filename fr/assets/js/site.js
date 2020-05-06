@@ -80,7 +80,7 @@
         ) {
             return changeHostName(
                 frCanonical,
-                '/fr' + window.location.hostname.replace(/^\/fr/, '')
+                '/fr' + window.location.pathname.replace(/^\/fr/, '')
             );
         }
     };
